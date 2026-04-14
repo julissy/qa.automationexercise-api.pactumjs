@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "ignoreDeprecations": "6.0",
+    "esModuleInterop": true,
+    "strict": true,
+    "types": ["node", "mocha", "chai"],
+    "allowJs": true
+  }
+,
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
+}
