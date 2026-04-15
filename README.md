@@ -1,17 +1,38 @@
 # qa.automationexercise-api.pactumjs
 
-Este projeto utiliza [pactumJS](https://pactumjs.github.io/) para automação de testes na aplicação [ServeRest](https://serverest.dev/)
+Este projeto utiliza [pactumJS](https://pactumjs.github.io/) para automação de testes na aplicação [ServeRest](https://serverest.dev/), com uma arquitetura moderna em **TypeScript**.
 
 ## Tecnologias Utilizadas
 
 - **[pactumJS](https://pactumjs.github.io/):** Framework principal para automação de testes de API.
-- **[Joi](https://joi.dev/):** Utilizada para validação de contratos das respostas das APIs.
+- **[TypeScript](https://www.typescriptlang.org/):** Linguagem para desenvolvimento type-safe.
+- **[Chai](https://www.chaijs.com/):** Biblioteca de assertions para validação de respostas.
 - **[mocha](https://mochajs.org/):** Framework de execução dos testes.
 - **[mochawesome](https://www.npmjs.com/package/mochawesome):** Gerador de relatórios dos testes.
+- **[tsx](https://tsx.is/):** Executor TypeScript nativo.
+
+## Estrutura do Projeto
+
+```
+src/
+├── core/              # Configurações principais
+├── dataBuilder/       # Construtores de dados para testes
+├── enum/              # Enumerações TypeScript
+├── interface/         # Interfaces TypeScript
+├── serverestDev/
+│   ├── data/          # Dados de teste (createUser.data.ts)
+│   ├── schemas/       # Schemas de validação
+│   └── test/user/     # Testes de usuário (CT01.test.ts, etc)
+├── service/           # Serviços de requisições
+└── utils/
+    ├── headers.ts     # Utilidades de headers
+    ├── specs.ts       # Especificações reutilizáveis
+    └── constants.ts   # Constantes da aplicação
+```
 
 ## Requisitos
 
-- [Node.js](https://nodejs.org/) versão 14 ou superior
+- [Node.js](https://nodejs.org/) versão 18 ou superior
 - [npm](https://www.npmjs.com/) (normalmente já incluso com o Node.js)
 
 ## Como instalar e executar o projeto
@@ -27,11 +48,11 @@ Este projeto utiliza [pactumJS](https://pactumjs.github.io/) para automação de
    npm install
    ```
 
-3. **Execute os testes de API e contrato:**
+3. **Execute testes específicos:**
    ```bash
-   npm run test
+   npm run ct01
    ```
-   Isso irá rodar todos os arquivos de teste localizados em `./test/*.test.js` utilizando o Mocha e gerar o relatório com o Mochawesome.
+   Isso irá executar o teste `CT01.test.ts` localizado em `./src/serverestDev/test/user/` utilizando TypeScript, tsx e Mocha, gerando relatório com Mochawesome.
 
 4. **Visualize o relatório dos testes:**
    Após a execução dos testes, abra o relatório HTML gerado:
@@ -42,6 +63,8 @@ Este projeto utiliza [pactumJS](https://pactumjs.github.io/) para automação de
 
 ## Exemplos
 
-- Testes básicos de requisições HTTP usando o ServeRest.dev
-- Validação de contratos das respostas com Joi
+- Testes estruturados em TypeScript com type-safety
+- Validação de respostas com Chai assertions
+- Organização modular com services, builders e utilities
+- Criação dinâmica de usuários com dataBuilder
 - Relatórios visuais de resultados dos testes
