@@ -1,6 +1,5 @@
 import "dotenv/config"
-import { assertTs, describeName, simpleReport, reportPactumJs } from "../../../core/constants"
-import { createUserDataBuilder } from "../../../constants"
+import { assertTs, describeName, simpleReport, reportPactumJs, createUserDataBuilder } from "../../../constants"
 import postCreateUsers from "../../../service/postCreateUsers.service"
 import { ct01CreateUser } from "../../data/createUser.data"
 import { ICreateUser } from "../../../interface/ICreateUser.interface"

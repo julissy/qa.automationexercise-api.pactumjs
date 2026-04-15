@@ -1,8 +1,10 @@
 import { faker } from "@faker-js/faker"
+import { UserType } from "../../enum/UserType.enum"
 
 export const ct01CreateUser = {
-  name: `[CT01-CriarUsuario] ${faker.person.firstName()}`,
+  name: `[CT01-CreateUserAdminValid] ${faker.person.firstName()}`,
 
+  administrador: UserType.ADMIN,
   paramsDefault: {
     statusCode: 201,
     retry: {

@@ -1,5 +1,6 @@
 import { faker } from "@faker-js/faker"
 import { ICreateUser } from "../interface/ICreateUser.interface"
+import { UserType } from "../enum/UserType.enum"
 
 export default class CreateUserDataBuilder {
   private user: ICreateUser
@@ -40,7 +41,7 @@ export default class CreateUserDataBuilder {
   /**
    * Define se é admin
    */
-  withAdministrador(admin: string): CreateUserDataBuilder {
+  withAdministrador(admin: UserType): CreateUserDataBuilder {
     this.user.administrador = admin
     return this
   }

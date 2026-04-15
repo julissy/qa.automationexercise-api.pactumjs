@@ -28,7 +28,7 @@
   },
   "scripts": {
     "report:open": "start mochawesome-report/mochawesome.html",
-    "ct01": "mocha --node-option import=tsx ./src/serverest.dev/test/user/CT01.test.ts --reporter mochawesome"
+    "all-tests": "mocha --node-option import=tsx ./src/serverestDev/test/user/USER-01.test.ts --reporter mochawesome"
   },
   "author": "",
   "license": "ISC",
