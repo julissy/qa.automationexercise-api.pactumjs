@@ -1,7 +1,7 @@
 import "dotenv/config"
 import { assertTs, describeName, simpleReport, reportPactumJs, createUserDataBuilder } from "../../../constants"
 import postCreateUsers from "../../../service/user/postCreateUsers.service"
-import { ct01CreateUserAdminValid } from "../../data/user.data"
+import { ct02CreateUserCommonValid } from "../../data/user.data"
 import { ICreateUser } from "../../../interface/ICreateUser.interface"
 
 describe(describeName, () => {
@@ -13,24 +13,24 @@ describe(describeName, () => {
 
     // ARRANGE → criação da massa com builder
     body = createUserDataBuilder
-    .withNome(ct01CreateUserAdminValid.name)
-    .withAdministrador(ct01CreateUserAdminValid.administrador)
+    .withNome(ct02CreateUserCommonValid.name)
+    .withAdministrador(ct02CreateUserCommonValid.administrador)
     .build()
   })
 
-  const testCase01 = it(ct01CreateUserAdminValid.name, async () => {
+  const testCase02 = it(ct02CreateUserCommonValid.name, async () => {
 
     // ACT
-    const response = await postCreateUsers(body, ct01CreateUserAdminValid.paramsDefault)
+    const response = await postCreateUsers(body, ct02CreateUserCommonValid.paramsDefault)
 
     // ASSERT
-    assertTs.equal(response.statusCode, ct01CreateUserAdminValid.paramsDefault.statusCode, 'Status code diferente do esperado')
+    assertTs.equal(response.statusCode, ct02CreateUserCommonValid.paramsDefault.statusCode, 'Status code diferente do esperado')
     assertTs.isNotNull(response.json._id, 'ID não deve ser nulo')
     assertTs.equal(response.json.message, "Cadastro realizado com sucesso", 'Mensagem incorreta')
   })
 
   after(async () => {
-    await rep.afterTest(testCase01)
+    await rep.afterTest(testCase02)
     await reportPactumJs.end()
   })
 })

@@ -10,7 +10,7 @@ export default class CreateUserDataBuilder {
       nome: faker.person.fullName(),
       email: faker.internet.email(),
       password: "teste",
-      administrador: "true"
+      administrador: UserType.COMMON
     }
   }
 
@@ -50,6 +50,8 @@ export default class CreateUserDataBuilder {
    * Retorna o objeto final
    */
   build(): ICreateUser {
+    this.user.nome = faker.person.fullName();
+    this.user.email = faker.internet.email();
     return this.user
   }
 }

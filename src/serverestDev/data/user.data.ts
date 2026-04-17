@@ -1,9 +1,8 @@
 import { faker } from "@faker-js/faker"
 import { UserType } from "../../enum/UserType.enum"
 
-export const ct01CreateUser = {
+export const ct01CreateUserAdminValid = {
   name: `[CT01-CreateUserAdminValid] ${faker.person.firstName()}`,
-
   administrador: UserType.ADMIN,
   paramsDefault: {
     statusCode: 201,
@@ -14,13 +13,11 @@ export const ct01CreateUser = {
   }
 }
 
-export const ct02CreateUserEmailDuplicado = {
-  name: `[CT02-CriarUsuarioEmailDuplicado] ${faker.person.firstName()}`,
-
-  emailDuplicado: "usuario_duplicado@qa.com",
-
+export const ct02CreateUserCommonValid = {
+  name: `[CT02-CreateUserCommonValid] ${faker.person.firstName()}`,
+  administrador: UserType.COMMON,
   paramsDefault: {
-    statusCode: 400,
+    statusCode: 201,
     retry: {
       count: 1,
       delay: 300,
