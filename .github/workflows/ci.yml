@@ -25,7 +25,7 @@ jobs:
           run: echo "BASE_URL=${{ secrets.BASE_URL }}" >> $GITHUB_ENV
 
         - name: Test e Report
-          run: npm run test
+          run: npm run all-tests
 
         - name: Upload Reports
           uses: actions/upload-artifact@v4
