@@ -28,7 +28,10 @@
   },
   "scripts": {
     "report:open": "start mochawesome-report/mochawesome.html",
-    "all-tests": "mocha --node-option import=tsx ./src/serverestDev/test/user/*.test.ts --reporter mochawesome"
+    "all-tests": "mocha --node-option import=tsx ./src/serverestDev/test/user/*.test.ts --reporter mochawesome",
+    "04test": "mocha --node-option import=tsx ./src/serverestDev/test/user/04-USER.test.ts --reporter mochawesome",
+    "03test": "mocha --node-option import=tsx ./src/serverestDev/test/user/03-USER.test.ts --reporter mochawesome",
+    "05test": "mocha --node-option import=tsx ./src/serverestDev/test/user/05-USER.test.ts --reporter mochawesome"
   },
   "author": "",
   "license": "ISC",
