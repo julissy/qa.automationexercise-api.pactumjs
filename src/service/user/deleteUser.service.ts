@@ -5,14 +5,16 @@ import { IParamsDefault } from "../../interface/IParamsDefault.interface"
 
 /**
  * Exclui um usuário na Serverest
+ * @param userId - ID do usuário a ser excluído
  * @param params - Configuração padrão de validação
  * @returns Response da requisição
  */
 export default async function deleteUser(
+  userId: string,
   params: IParamsDefault
 ) {
   return await specPactumJs()
-    .delete(`${process.env.BASE_URL}/usuarios/{body._id}`)
+    .delete(`${process.env.BASE_URL}/usuarios/${userId}`)
     .withHeaders(defaultHeaders)
     .expectStatus(params.statusCode)
     .retry({

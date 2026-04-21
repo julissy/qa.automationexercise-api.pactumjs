@@ -14,11 +14,11 @@ describe(describeName, () => {
     // ARRANGE → criação da massa com builder
     body = createUserDataBuilder
     .withNome(ct02CreateUserCommonValid.name)
-    .withAdministrador(ct02CreateUserCommonValid.administrador)
+    .withAdministrador(ct02CreateUserCommonValid.administrator)
     .build()
   })
 
-  const testCase02 = it(ct02CreateUserCommonValid.name, async () => {
+  const testCase02 = it("[02-USER] - Validar a criação de um usuário comum", async () => {
 
     // ACT
     const response = await postCreateUsers(body, ct02CreateUserCommonValid.paramsDefault)
@@ -26,7 +26,7 @@ describe(describeName, () => {
     // ASSERT
     assertTs.equal(response.statusCode, ct02CreateUserCommonValid.paramsDefault.statusCode, 'Status code diferente do esperado')
     assertTs.isNotNull(response.json._id, 'ID não deve ser nulo')
-    assertTs.equal(response.json.message, "Cadastro realizado com sucesso", 'Mensagem incorreta')
+    assertTs.equal(response.json.message, ct02CreateUserCommonValid.expectedMessage, 'Mensagem incorreta')
   })
 
   after(async () => {
