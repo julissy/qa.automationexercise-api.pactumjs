@@ -2,7 +2,7 @@ import { reporter } from "pactum"
 import 'mocha'
 
 
-import CreateUserDataBuilder from "./dataBuilder/CreateUser.dataBuilder"
+import CreateUserDataBuilder from "./dataBuilder/createUser.dataBuilder"
 
 export const createUserDataBuilder = new CreateUserDataBuilder()
 
