@@ -22,12 +22,13 @@ src/
 ├── serverestDev/
 │   ├── data/          # Dados de teste (createUser.data.ts)
 │   ├── schemas/       # Schemas de validação
-│   └── test/user/     # Testes de usuário (CT01.test.ts, etc)
+│   └── test/          # Testes de usuário (CT01.test.ts, etc)
 ├── service/           # Serviços de requisições
 └── utils/
     ├── headers.ts     # Utilidades de headers
     ├── specs.ts       # Especificações reutilizáveis
     └── constants.ts   # Constantes da aplicação
+└── scenarios          # Casos de testes manuais (.md)
 ```
 
 ## Requisitos
@@ -50,9 +51,9 @@ src/
 
 3. **Execute testes específicos:**
    ```bash
-   npm run ct01
+   npm run all-tests
    ```
-   Isso irá executar o teste `CT01.test.ts` localizado em `./src/serverestDev/test/user/` utilizando TypeScript, tsx e Mocha, gerando relatório com Mochawesome.
+   Isso irá executar todos os testes
 
 4. **Visualize o relatório dos testes:**
    Após a execução dos testes, abra o relatório HTML gerado:
