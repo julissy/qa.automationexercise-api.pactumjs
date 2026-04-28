@@ -49,7 +49,7 @@ src/
    npm install
    ```
 
-3. **Execute testes específicos:**
+3. **Execute testes:**
    ```bash
    npm run all-tests
    ```
