@@ -2,7 +2,7 @@ import "dotenv/config"
 import { assertTs, describeName, simpleReport, reportPactumJs, createUserDataBuilder } from "../../../constants"
 import postCreateUsers from "../../../service/user/postCreateUsers.service"
 import { ct02CreateUserCommonValid } from "../../data/user.data"
-import { ICreateUser } from "../../../interface/ICreateUser.interface"
+import { ICreateUser } from "../../../interface/IUser/ICreateUser.interface"
 
 describe(describeName, () => {
   const rep = simpleReport

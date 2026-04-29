@@ -9,8 +9,8 @@ import {
 import postCreateUsers from "../../../service/user/postCreateUsers.service"
 import deleteUser from "../../../service/user/deleteUser.service"
 import { ct05DeleteUser } from "../../data/user.data"
-import { ICreateUser } from "../../../interface/ICreateUser.interface"
-import { ICreateUserResponse, IDeleteUserResponse } from "../../../interface/IGetUsersResponse.interface"
+import { ICreateUser } from "../../../interface/IUser/ICreateUser.interface"
+import { ICreateUserResponse, IDeleteUserResponse } from "../../../interface/IUser/IGetUsersResponse.interface"
 
 describe(describeName, () => {
   let createUser: ICreateUser

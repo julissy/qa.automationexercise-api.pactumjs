@@ -1,8 +1,8 @@
 import "dotenv/config"
 import { specPactumJs } from "../../utils/spec"
 import { defaultHeaders } from "../../utils/headers"
-import { IParamsDefault } from "../../interface/IParamsDefault.interface"
-import { ICreateUser } from "../../interface/ICreateUser.interface"
+import { IParamsDefault } from "../../interface/IUser/IParamsDefault.interface"
+import { ICreateUser } from "../../interface/IUser/ICreateUser.interface"
 
 /**
  * Cria um novo usuário na Serverest

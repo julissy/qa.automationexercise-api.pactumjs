@@ -1,5 +1,5 @@
 import { faker } from "@faker-js/faker"
-import { ICreateUser } from "../interface/ICreateUser.interface"
+import { ICreateUser } from "../interface/IUser/ICreateUser.interface"
 import { UserType } from "../enum/UserType.enum"
 
 export default class CreateUserDataBuilder {

@@ -7,7 +7,7 @@ import {
 } from "../../../constants"
 import getUsers from "../../../service/user/getUsers.service"
 import { ct04GetUsers } from "../../data/user.data"
-import { IGetUsersResponse } from "../../../interface/IGetUsersResponse.interface"
+import { IGetUsersResponse } from "../../../interface/IUser/IGetUsersResponse.interface"
 
 describe(describeName, () => {
   let body: IGetUsersResponse
