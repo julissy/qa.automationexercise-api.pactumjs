@@ -8,8 +8,8 @@ import {
 import postCreateUsers from "../../../service/user/postCreateUsers.service"
 import getUser from "../../../service/user/getUser.service"
 import { ct03GetUser } from "../../data/user.data"
-import { ICreateUser } from "../../../interface/ICreateUser.interface"
-import { IGetUserResponse, ICreateUserResponse } from "../../../interface/IGetUsersResponse.interface"
+import { ICreateUser } from "../../../interface/IUser/ICreateUser.interface"
+import { IGetUserResponse, ICreateUserResponse } from "../../../interface/IUser/IGetUsersResponse.interface"
 
 describe(describeName, () => {
   let createUser: ICreateUser

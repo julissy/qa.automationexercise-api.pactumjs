@@ -1,7 +1,7 @@
 import "dotenv/config"
 import { specPactumJs } from "../../utils/spec"
 import { defaultHeaders } from "../../utils/headers"
-import { IParamsDefault } from "../../interface/IParamsDefault.interface"
+import { IParamsDefault } from "../../interface/IUser/IParamsDefault.interface"
 
 /**
  * Exclui um usuário na Serverest
